@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">TrabalhoAndroid</string>
+    <string name="app_name">Restaurante do Valdir</string>
+    <string name="SplashScreen">Splash Screen</string>
+    <string name="ImagemSplashScreen">ImagemSplash</string>
+    <string name="grupo">Restaurante do Valdir Bigode</string>
+    <string name="logoSplash">logoSplash</string>
 </resources>

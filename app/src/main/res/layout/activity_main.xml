@@ -11,7 +11,10 @@
     tools:context="com.ees2015.trabalho.trabalhoandroid.MainActivity">
 
     <TextView
-        android:text="Hello World!"
+        android:text="Hello World! trabalho Android ow yeah"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
 </RelativeLayout>
