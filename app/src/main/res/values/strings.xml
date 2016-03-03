@@ -3,5 +3,9 @@
     <string name="SplashScreen">Splash Screen</string>
     <string name="ImagemSplashScreen">ImagemSplash</string>
     <string name="grupo">Restaurante do Valdir Bigode</string>
-    <string name="logoSplash">logoSplash</string>
+    <string name="logoSplash">Logo Splash</string>
+    <string name="login">Login</string>
+    <string name="registrar">Registrar</string>
+    <string name="logout">Logout</string>
+    <string name="registreseaqui">Sem login? Registre-se aqui</string>
 </resources>

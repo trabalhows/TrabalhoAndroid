@@ -18,10 +18,21 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>
 
+    <TextView
+        android:text="Senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etSenha"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
 
     <Button
-        android:id="@+id/bLogout"
-        android:text="@string/logout"
+        android:id="@+id/bRegistrar"
+        android:text="@string/registrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
