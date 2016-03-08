@@ -3,10 +3,13 @@ package com.ees2015.trabalho.trabalhoandroid;
 
 public class User {
 
-    String nomeUsuario, senha;
+    int id;
+    String nome, login, senha;
 
-    public User(String nomeUsuario, String senha){
-        this.nomeUsuario = nomeUsuario;
+    public User(int id, String nome, String login, String senha){
+        this.id = id;
+        this.nome = nome;
+        this.login = login;
         this.senha = senha;
     }
 

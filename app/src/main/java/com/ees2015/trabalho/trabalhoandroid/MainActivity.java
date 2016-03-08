@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button bLogout;
     EditText etNomeUsuario;
-    UserLocalStore userLocalStore;
+    Button userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         bLogout.setOnClickListener(this);
 
-        userLocalStore = new UserLocalStore(this);
+     //   userLocalStore = new UserLocalStore(this);
     }
 
     @Override
@@ -30,18 +30,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onStart();
 
         // assim que o usuário autentica, mostra os dados dele
+        // se não estiver logado, abre a activity de login
         if (authenticate()){
             displayUserDetails();
+        } else {
+            startActivity(new Intent(MainActivity.this, Login.class));
         }
     }
 
     private boolean authenticate(){
-        return userLocalStore.getUserLoggedIn();
+        //return userLocalStore.getUserLoggedIn();
+        return true;
     }
 
     private void displayUserDetails(){
-        User user =  userLocalStore.getLoggedInUser();
-        etNomeUsuario.setText(user.nomeUsuario);
+        //User user =  userLocalStore.getLoggedInUser();
+        //etNomeUsuario.setText(user.login);
     }
 
     // notificar o onClick quando clicar no Botão bLogout
@@ -50,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // para evitar sobrecarregar a tela pra capturar só o id do campo
         switch (v.getId()){
             case R.id.bLogout:
-                userLocalStore.clearUserData();
-                userLocalStore.setUserLoggedIn(false);
+                //userLocalStore.clearUserData();
+                //userLocalStore.setUserLoggedIn(false);
 
                 startActivity(new Intent(this, Login.class));
                 break;

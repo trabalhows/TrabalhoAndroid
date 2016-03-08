@@ -13,7 +13,7 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/etNomeUsuario"
+        android:id="@+id/etLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"/>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ees2015.trabalho.trabalhoandroid">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +14,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity android:name=".Splash">
@@ -23,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Welcome"/>
     </application>
 
 </manifest>
