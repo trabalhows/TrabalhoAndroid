@@ -6,6 +6,8 @@
     <string name="logoSplash">Logo Splash</string>
     <string name="login">Login</string>
     <string name="registrar">Registrar</string>
-    <string name="logout">Logout</string>
+    <string name="sair">Sair</string>
     <string name="registreseaqui">Sem login? Registre-se aqui</string>
+    <string name="novopedido">Novo Pedido</string>
+    <string name="pagamento">Pagamento</string>
 </resources>

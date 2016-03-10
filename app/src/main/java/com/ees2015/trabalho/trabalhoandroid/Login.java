@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
+import com.android.volley.Request.Method;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -31,8 +32,10 @@ public class Login extends AppCompatActivity  {
     EditText etLogin, etSenha;
     TextView tvRegistrarLink;
     private RequestQueue requestQueue;
-    private static final String URL = "http://trabalhoandroidees2015.site88.net/trab/login.php";
-    private StringRequest request;
+    //private static final String URL = "http://trabalhoandroidees2015.site88.net/trab/login2.php";
+    private static final String URL = "http://www.trabalhoandroid.esy.es/trab2/login.php";
+
+    private StringRequest stringRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +55,13 @@ public class Login extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-                request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                stringRequest = new StringRequest(Method.POST, URL, new Response.Listener<String>() {
 
                     @Override
                     public void onResponse(String response) {
                         try {
                             // leitura que o app recebe do servidor
-                            // deve retornar mensagem de sucesso ou de erro, ex: { "Sucesso. ": "Bem-vindo teste@gmail.com" }
+                            // deve retornar mensagem de sucesso ou de erro, ex: { "Sucesso. ": "Bem-vindo fulano" }
                             JSONObject jsonObject = new JSONObject(response);
                             if(jsonObject.names().get(0).equals("success")){
                                 // a resposta é positiva
@@ -66,7 +69,7 @@ public class Login extends AppCompatActivity  {
                                 // o toast vai aparecer na tela vai ser: "SUCCESS <o conteúdo do campo sucess do json enviado pelo servidor>"
                                 Toast.makeText(getApplicationContext(),"Sucesso. "+jsonObject.getString("success"),Toast.LENGTH_SHORT).show();
                                 // chama a activity após o login
-                                startActivity(new Intent(getApplicationContext(),Welcome.class));
+                                startActivity(new Intent(getApplicationContext(),Dashboard.class));
                             }else {
                                 // se falhar o login, há algum erro de login ou senha
                                 // o "error" do jsonObject.getString("error") é o elemento do objeto
@@ -96,8 +99,9 @@ public class Login extends AppCompatActivity  {
                     }
                 };
 
-                requestQueue.add(request);
+                requestQueue.add(stringRequest);
             }
         });
     }
 }
+

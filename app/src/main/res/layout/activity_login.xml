@@ -22,7 +22,7 @@
         android:text="Senha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
     <EditText
         android:id="@+id/etSenha"
@@ -36,16 +36,6 @@
         android:text="@string/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:id="@+id/tvRegistrarLink"
-        android:text="@string/registreseaqui"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
